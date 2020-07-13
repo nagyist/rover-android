@@ -34,7 +34,7 @@ class ExampleMainActivity : AppCompatActivity() {
         // Tries to retrieve campaignId query parameter:
         val queryCampaignId = uri.getQueryParameter("campaignID")
         
-        if (uri.scheme == getString(R.string.uri_scheme) && uri.host == "experience" && queryExperienceId != null) {
+        if (uri.scheme == getString(R.string.uri_scheme) && uri.host == "presentExperience" && queryExperienceId != null) {
             startActivity(RoverActivity.makeIntent(packageContext = this, experienceId = queryExperienceId, campaignId = queryCampaignId, initialScreenId = queryInitialScreenId))
             return
         }
