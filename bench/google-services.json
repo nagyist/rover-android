@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "207446763144",
+    "project_id": "rover-testbench",
+    "storage_bucket": "rover-testbench.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207446763144:android:0f97c0c9604685bc3ee13d",
+        "android_client_info": {
+          "package_name": "io.rover.testbench"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207446763144-4q1gs27f3gs7hiifgsnaa6bdka6bfkef.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.rover.testbench",
+            "certificate_hash": "837c1066cf8905ff3d6ee4c12ee4d64ec8c501b5"
+          }
+        },
+        {
+          "client_id": "207446763144-3up8a3tg0uiu837b4ml5og8dqppsvrdc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzmhZZnS_0I1qvnIg0SttE3kHlOYbhElQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "207446763144-3up8a3tg0uiu837b4ml5og8dqppsvrdc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

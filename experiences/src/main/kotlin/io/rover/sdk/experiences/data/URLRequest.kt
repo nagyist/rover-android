@@ -29,4 +29,8 @@ data class URLRequest(
     var method: HttpMethod,
     var headers: HashMap<String, String> = hashMapOf(),
     var body: String? = null
-)
+) {
+    fun copy(): URLRequest {
+        return URLRequest(url, method, HashMap(headers.toMap()), body)
+    }
+}

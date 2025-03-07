@@ -15,15 +15,13 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package io.rover.sdk.core.data
+package io.rover.testbench.ui.theme
 
-/**
- * A version of Authentication Context that works with simply a standard SDK Key, acquired from
- * [Rover Profile/Account settings](https://app.rover.io/settings/overview), as "Server Key" under
- * the "Account Tokens"->"Android" section.
- */
-data class ServerKey(
-    override val sdkToken: String?
-) : AuthenticationContext {
-    override val bearerToken: String? = ""
-}
+import androidx.compose.ui.graphics.Color
+
+// I used tailwind colors here instead of Material. Sorry.
+
+val Cyan200 = Color(0xffa5f3fc)
+val Cyan500 = Color(0xff06b6d4)
+val Cyan700 = Color(0xff0e7490)
+val Blue200 = Color(0xffbfdbfe)
