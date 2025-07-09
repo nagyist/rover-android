@@ -53,6 +53,15 @@ android {
         manifestPlaceholders["auth0Scheme"] = "demo"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file(System.getenv("KEYSTORE_FILE") ?: "keystore.jks")
+            storePassword = System.getenv("KEYSTORE_PASSWORD") ?: ""
+            keyAlias = System.getenv("KEY_ALIAS") ?: ""
+            keyPassword = System.getenv("KEY_PASSWORD") ?: ""
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -63,6 +72,16 @@ android {
 
             // This allows the Network Security Policy to apply.
             isDebuggable = true
+            
+            // Apply signing configuration
+            signingConfig = signingConfigs.getByName("release")
+        }
+        
+        debug {
+            // Apply the same signing configuration to debug builds when available
+            if (System.getenv("KEYSTORE_FILE") != null) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
     }
     compileOptions {

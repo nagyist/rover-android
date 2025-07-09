@@ -105,7 +105,13 @@ class RoverBenchApplication : Application() {
 
         // To avoid adding an extra endpoint to api.rover.io, to enable testing the behaviour
         // of SDK authentication we'll add an endpoint to the datasource testing app.
-        Rover.shared.authenticationContext.enableSdkAuthIdTokenRefreshForDomain("datasource-testing.vercel.app")
+
+        // we want to match datasource-testing.vercel.app, and this wildcard tests our wildcard
+        // matching support. Under normal conditions pattern matching all of vercel and every
+        // random person's apps for including a token header to would be very bad, but in this
+        // case we are only sending an ID token (which is not particularly valuable) *and* this
+        // is a testing app.
+        Rover.shared.authenticationContext.enableSdkAuthIdTokenRefreshForDomain("*.vercel.app")
 
         Rover.shared.registerCustomActionCallback { customActionActivation ->
             val activity = customActionActivation.activity
